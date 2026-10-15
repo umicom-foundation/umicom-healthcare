@@ -1,9 +1,0 @@
-# Umicom Framework | Sammy Hegab, Umicom Foundation | MIT
-# Resolve the dependency selected when the exported static owner was built.
-if(ON)
-    include(CMakeFindDependencyMacro)
-    find_dependency(PkgConfig)
-    if(NOT TARGET PkgConfig::UMICOM_CONNECTION_CHECK_CURL)
-        pkg_check_modules(UMICOM_CONNECTION_CHECK_CURL REQUIRED IMPORTED_TARGET GLOBAL libcurl>=7.85.0)
-    endif()
-endif()
