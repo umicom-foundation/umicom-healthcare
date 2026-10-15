@@ -1,0 +1,48 @@
+# Build outputs: no generated binaries or test results in Git.
+/build/
+/build-*/
+/out/
+/.cache/
+/CMakeFiles/
+/CMakeCache.txt
+/Testing/
+/compile_commands.json
+*.obj
+*.o
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# Never commit clinical records, simulated data sets with real identifiers,
+# credentials, patient exports, or local runtime databases.
+/secrets/
+/data/
+/runtime/
+/local/
+*.db
+*.sqlite
+*.sqlite3
+*.pem
+*.p12
+*.pfx
+*.key
+*.env
+!.env.example
+
+# Developer environments
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Personal CMake settings and dotenv variants may contain machine paths or
+# service credentials. Keep only placeholder examples available for publication.
+/CMakeUserPresets.json
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+!.env.dist
